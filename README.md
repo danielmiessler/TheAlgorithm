@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/header.png" alt="TheAlgorithm" width="200">
+  <img src="assets/logo.png" alt="TheAlgorithm" width="200">
 
   # TheAlgorithm
 
