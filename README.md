@@ -3,92 +3,96 @@
 
   # TheAlgorithm
 
-  **A General Problem-Solving Framework for Achieving Euphoric Surprise**
+  **An experiment in systematic problem-solving**
 
   [![Version](https://img.shields.io/badge/version-0.1-blue.svg)](https://github.com/danielmiessler/TheAlgorithm/releases)
   [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
   [![PAI](https://img.shields.io/badge/PAI-integrated-purple.svg)](https://github.com/danielmiessler/PAI)
-  [![Status](https://img.shields.io/badge/status-active-success.svg)]()
+  [![Status](https://img.shields.io/badge/status-experimental-orange.svg)]()
 
-  [Philosophy](#philosophy) • [How It Works](#how-it-works) • [PAI Integration](#pai-integration) • [Versioning](#versioning) • [Documentation](#documentation)
+  [The Idea](#the-idea) • [How It Works](#how-it-works) • [PAI Integration](#pai-integration) • [Versioning](#versioning) • [Documentation](#documentation)
 </div>
 
 ---
 
-## 🎯 Overview
+## 🎯 The Idea
 
-TheAlgorithm is a general problem-solving framework designed to systematically transition from **current state** to **ideal state** through verifiable, granular criteria. It serves as the methodological foundation for the [PAI (Personal AI Infrastructure)](https://github.com/danielmiessler/PAI) system.
+I've been working on a general problem-solving framework that I'm calling TheAlgorithm. The core idea is pretty simple: systematically move from **current state** to **ideal state** through verifiable criteria.
 
-**The Goal:** Produce "Euphoric Surprise" from every response.
+I'm using it as the foundation for my [PAI (Personal AI Infrastructure)](https://github.com/danielmiessler/PAI) system, and early results are promising.
 
-**The Method:** Hill-climbing toward Ideal State through testable criteria.
+**The goal:** Every response should surprise and delight ("Euphoric Surprise")
+
+**The method:** Hill-climb toward the ideal state using testable criteria
+
+This is v0.1 - my first real attempt at codifying this. I'm sure it'll evolve significantly as I learn what works and what doesn't.
 
 ---
 
-## 💡 Philosophy
+## 💡 The Core Insight
 
-### The Core Insight
+I think the most important thing in any iterative improvement process is the transition from **CURRENT STATE** to **IDEAL STATE**.
 
-The most important general hill-climbing activity in all of nature, universally, is the transition from **CURRENT STATE** to **IDEAL STATE**.
+This seems obvious, but I don't think most systems actually operationalize it well. Here's what I'm exploring:
 
-This simple truth has profound implications:
+1. **You need granular, verifiable state**
+   If you can't measure where you are, you can't tell if you're making progress.
 
-1. **Verifiable Progress Requires Granular State**
-   Anything you want to iteratively improve must have state that's verifiable at a granular level.
+2. **Criteria need to be testable**
+   Vague goals like "make it better" don't work. You need discrete, binary tests.
 
-2. **Criteria Must Be Testable**
-   You cannot hill-climb without discrete, granular, binary, and testable criteria.
+3. **Ideal state is your north star**
+   You can't build good criteria without understanding what "done" looks like.
 
-3. **Ideal State Is The North Star**
-   You cannot build those criteria without perfect understanding of what the IDEAL STATE looks like.
-
-4. **Dynamic Maintenance Is Critical**
-   The capture and dynamic maintenance of IDEAL STATE is the single most important activity in the process of hill climbing towards Euphoric Surprise.
+4. **The ideal state changes**
+   As you learn more, your understanding of "ideal" evolves. The system needs to capture that.
 
 <div align="center">
   <img src="assets/algorithm-foundational.png" alt="Algorithm Foundational Concepts" width="900">
-  <p><em>The foundational concepts that power TheAlgorithm</em></p>
+  <p><em>The pieces I'm working with</em></p>
 </div>
 
 ---
 
 ## ⚙️ How It Works
 
-TheAlgorithm operationalizes these principles through:
+I'm testing three main components:
 
 ### 1. **Ideal State Criteria (ISC)**
-Discrete, granular, binary, testable criteria that define success
-- **Exactly 8 words** - Forces precision
-- **Granular** - Atomic, single-concern
-- **Discrete** - Clear boundaries, not overlapping
-- **Testable** - Binary YES/NO in <2 seconds
-- **State-based** - Describes what IS true, not what to DO
+Specific, testable statements about what success looks like:
+- **Exactly 8 words** - Keeps them focused
+- **Granular** - One thing per criterion
+- **Discrete** - Clear boundaries
+- **Testable** - Binary YES/NO you can check quickly
+- **State-based** - What IS true, not what to DO
 
 ### 2. **Seven-Phase Execution**
-A scientific-method-inspired inner loop:
+A loop inspired by the scientific method:
 
 ```
-OBSERVE  → Gather current state, context, and user intent
-THINK    → Analyze underlying meaning and ideal outcome
-PLAN     → Build ISC criteria and select capabilities
-BUILD    → Construct solution components
-EXECUTE  → Take actions toward criteria
-VERIFY   → Confirm all criteria with evidence
-LEARN    → Capture insights and next steps
+OBSERVE  → What's the current state and what was requested?
+THINK    → What's the underlying intent and ideal outcome?
+PLAN     → What criteria define success?
+BUILD    → Create the solution components
+EXECUTE  → Take actions toward the criteria
+VERIFY   → Confirm each criterion with evidence
+LEARN    → Capture insights for next time
 ```
 
 ### 3. **Euphoric Surprise**
-The standard for every output. Not "good enough" - **surprising delight**.
+I'm shooting for responses that make you go "wow, I didn't expect that!" instead of just "yeah, that works."
+
+Is this realistic? Not sure yet. But setting a high bar seems better than settling for "good enough."
 
 ---
 
 ## 🔗 PAI Integration
 
-TheAlgorithm powers PAI's response system. Every PAI interaction follows the algorithm's structure.
+I'm using this in PAI - every interaction follows the algorithm structure. It's working well so far, but I'm still experimenting.
 
 ### Configuration
 
-PAI can consume TheAlgorithm in three ways:
+PAI can load TheAlgorithm three ways:
 
 **1. Always Latest (Default)**
 ```json
@@ -96,7 +100,7 @@ PAI can consume TheAlgorithm in three ways:
   "algorithmSource": "latest"
 }
 ```
-Fetches from: `TheAlgorithm.md` (main branch)
+Pulls from: `TheAlgorithm.md` (main branch)
 
 **2. Pin to Specific Version**
 ```json
@@ -104,23 +108,21 @@ Fetches from: `TheAlgorithm.md` (main branch)
   "algorithmSource": "v0.1"
 }
 ```
-Fetches from: `versions/v0.1.md` (immutable)
+Pulls from: `versions/v0.1.md` (doesn't change)
 
-**3. Use Custom Local Version**
+**3. Use Your Own Version**
 ```json
 {
   "algorithmSource": "local",
-  "algorithmLocalPath": "/path/to/custom-algorithm.md"
+  "algorithmLocalPath": "/path/to/your-algorithm.md"
 }
 ```
-Uses your modified version for testing
+Test your own ideas before publishing
 
-### Integration Pattern
-
-PAI's build system fetches TheAlgorithm at build time:
+### How PAI Uses It
 
 ```typescript
-// PAI BuildSkill.ts
+// PAI fetches at build time
 const algorithm = await fetchAlgorithm({
   version: config.algorithmSource,
   cacheDir: "~/.claude/cache/algorithm",
@@ -128,82 +130,52 @@ const algorithm = await fetchAlgorithm({
 });
 ```
 
-**Caching Strategy:**
-- Specific versions (v0.1, v0.2): Cached permanently
-- Latest: TTL-based refresh on builds
-- Fallback: Bundled version if fetch fails
-
-### URL Patterns
-
-```bash
-# Latest version
-https://raw.githubusercontent.com/danielmiessler/TheAlgorithm/main/TheAlgorithm.md
-
-# Specific version (immutable)
-https://raw.githubusercontent.com/danielmiessler/TheAlgorithm/main/versions/v0.1.md
-
-# Git tag (alternative)
-https://raw.githubusercontent.com/danielmiessler/TheAlgorithm/v0.1/TheAlgorithm.md
-```
+**Caching:**
+- Specific versions: Cached permanently
+- Latest: Refreshes on builds
+- Fallback: Uses bundled version if fetch fails
 
 ---
 
 ## 📦 Versioning
 
-TheAlgorithm uses a hybrid versioning strategy optimized for both PAI automation and human browsing:
-
-### Repository Structure
+I'm using semantic versioning:
 
 ```
 TheAlgorithm/
-  TheAlgorithm.md           # Always points to latest
+  TheAlgorithm.md           # Current version
   versions/
-    v0.1.md                 # Frozen snapshot
-    v0.2.md                 # Frozen snapshot
-  CHANGELOG.md              # Version history
-  README.md                 # This file
+    v0.1.md                 # Frozen snapshots
+    v0.2.md
+  CHANGELOG.md              # What changed
 ```
 
-### Version Strategy
+**Version bumps:**
+- **MAJOR** (0.x → 1.0): Breaking changes to format
+- **MINOR** (0.1 → 0.2): New features, backward compatible
+- **PATCH** (0.1.0 → 0.1.1): Typos, clarifications
 
-- **Semantic Versioning**: `MAJOR.MINOR.PATCH`
-  - **MAJOR**: Breaking changes to ISC format or core concepts
-  - **MINOR**: New features (sections, optional fields) - backward compatible
-  - **PATCH**: Typos, clarifications, examples - no structural changes
-
-- **Git Tags**: All releases also tagged (`v0.1`, `v0.2`)
-- **GitHub Releases**: Formal releases with changelogs
-
-### When to Upgrade
-
-| Your PAI Config | When to Change |
-|-----------------|----------------|
-| `"latest"` | Automatic - always uses current |
-| `"v0.1"` | Manual - change when you want to upgrade |
-| `"local"` | Never - you control the file |
-
-**Breaking Changes:** Major version bumps (v0.x → v1.0) require reviewing your PAI configuration.
+| Your Config | Behavior |
+|-------------|----------|
+| `"latest"` | Auto-updates with each change |
+| `"v0.1"` | Stays on v0.1 until you change it |
+| `"local"` | Uses your file |
 
 ---
 
 ## 📚 Documentation
 
-### Complete Specification
+The full spec is in **[TheAlgorithm.md](./TheAlgorithm.md)**:
+- All 7 phases in detail
+- ISC criteria requirements
+- Examples and anti-patterns
+- Common failure modes
 
-See **[TheAlgorithm.md](./TheAlgorithm.md)** for:
-- Full execution format (all 7 phases)
-- ISC criteria requirements and examples
-- Progressive output requirements
-- Common failure modes and fixes
-- Complete capabilities matrix
-- Anti-patterns to avoid
-
-### Quick Start
-
-1. **Read the philosophy** (above) to understand the "why"
-2. **Review the specification** ([TheAlgorithm.md](./TheAlgorithm.md)) for the "how"
-3. **See it in action** in [PAI](https://github.com/danielmiessler/PAI)
-4. **Customize if needed** by forking and using local configuration
+**To try it:**
+1. Read the philosophy above to get the idea
+2. Check out the spec to see how it works
+3. Look at [PAI](https://github.com/danielmiessler/PAI) to see it in action
+4. Fork it and try your own version
 
 ---
 
@@ -211,34 +183,34 @@ See **[TheAlgorithm.md](./TheAlgorithm.md)** for:
 
 ### ISC (Ideal State Criteria)
 
-The core innovation. Instead of vague goals like "make it better," ISC forces precision:
+Instead of "fix the auth bug", try:
+- "All authentication tests pass after fix applied" (8 words, testable)
 
-**Bad:** "Fix the authentication bug"
-**Good:** "All authentication tests pass after fix applied" (8 words, testable)
+Instead of "improve the UI", try:
+- "Login button centered on screen with correct spacing" (8 words, verifiable)
 
-**Bad:** "Improve the UI"
-**Good:** "Login button centered on screen with correct spacing" (8 words, verifiable)
+The constraint forces clarity.
 
 ### Anti-Criteria
 
-What must NOT happen. Equally important as positive criteria:
-
-**Example Anti-Criteria:**
+What must NOT happen:
 - "No credentials exposed in git commit history"
 - "No breaking changes to existing public API endpoints"
 - "Database migrations do not lose any user data"
 
 ### Euphoric Surprise
 
-The audacious standard. Not:
-- ✗ "Good enough"
-- ✗ "Met requirements"
-- ✗ "No complaints"
+I'm aiming for reactions like:
+- "Wow, I didn't expect that!"
+- "This is exactly what I needed and more"
+- "How did it know to do that?"
 
-But:
-- ✓ "Wow, I didn't expect that!"
-- ✓ "This is exactly what I needed and more"
-- ✓ "How did it know to do that?"
+Instead of:
+- "Good enough"
+- "Met requirements"
+- "No complaints"
+
+Not sure if this is achievable consistently, but that's the experiment.
 
 ---
 
@@ -246,54 +218,33 @@ But:
 
 ### v0.1 (2026-01-24)
 - Initial release
-- Seven-phase execution format
+- Seven-phase execution
 - ISC criteria system
-- Progressive output requirements
-- Capabilities matrix
-- PAI integration patterns
-
----
-
-## 🌟 Principles in Action
-
-### 1. Single Source of Truth
-`TheAlgorithm.md` is always current. Historical versions archived in `versions/`.
-
-### 2. Immutable Versions
-Once `v0.1.md` is published, it never changes. This enables permanent URLs and reliable caching.
-
-### 3. Progressive Enhancement
-Start with "latest", pin to specific version when stability matters more than features.
-
-### 4. Local Override
-Developers can test algorithm changes locally before publishing.
-
-### 5. Graceful Degradation
-PAI falls back to bundled version if network fetch fails.
+- PAI integration
 
 ---
 
 ## 🤝 Contributing
 
-TheAlgorithm evolves through:
-- **Issues**: Propose clarifications or improvements
-- **Discussions**: Philosophical questions about the approach
-- **Pull Requests**: Typos, examples, documentation improvements
+I'm actively experimenting with this, so feedback is welcome:
+- **Issues**: Suggest improvements or point out problems
+- **Discussions**: Question the approach or share ideas
+- **PRs**: Fix typos, improve examples, add clarity
 
-**Major Changes:** Open an issue first to discuss before investing effort.
+If you want to propose major changes, open an issue first so we can discuss.
 
 ---
 
 ## 🔗 Related Projects
 
-- **[PAI](https://github.com/danielmiessler/PAI)** - Personal AI Infrastructure (primary implementation)
-- **[Fabric](https://github.com/danielmiessler/fabric)** - AI pattern system
+- **[PAI](https://github.com/danielmiessler/PAI)** - Where I'm using this
+- **[Fabric](https://github.com/danielmiessler/fabric)** - Related pattern system
 
 ---
 
 ## 📄 License
 
-MIT License - See [LICENSE](LICENSE) file for details
+MIT License - See [LICENSE](LICENSE) file
 
 ---
 
@@ -308,8 +259,8 @@ MIT License - See [LICENSE](LICENSE) file for details
 
 <div align="center">
 
-  **"The capture and dynamic maintenance of IDEAL STATE is the single most important activity in the process of hill climbing towards Euphoric Surprise."**
+  **"I think the key is capturing and maintaining what IDEAL STATE actually means as you learn more."**
 
-  ⭐ Star this repo if TheAlgorithm helps you achieve better outcomes!
+  ⭐ Star this if you find the idea interesting!
 
 </div>
