@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="assets/algorithm-header.png" alt="TheAlgorithm" width="800">
+</div>
+
 # TheAlgorithm
 
 **Version:** 0.1
