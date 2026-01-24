@@ -46,8 +46,8 @@ This simple truth has profound implications:
    The capture and dynamic maintenance of IDEAL STATE is the single most important activity in the process of hill climbing towards Euphoric Surprise.
 
 <div align="center">
-  <img src="assets/algorithm-diagram.png" alt="Algorithm Foundational Concepts" width="700">
-  <p><em>The foundational concepts that power TheAlgorithm</em></p>
+  <img src="assets/algorithm-phases.png" alt="The Seven-Phase Algorithm" width="900">
+  <p><em>The seven-phase execution flow: OBSERVE → THINK → PLAN → BUILD → EXECUTE → VERIFY → LEARN</em></p>
 </div>
 
 ---
