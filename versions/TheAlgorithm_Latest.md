@@ -1,4 +1,4 @@
-# The Algorithm ( v0.2.13 | github.com/danielmiessler/TheAlgorithm)
+# The Algorithm ( v0.2.14 | github.com/danielmiessler/TheAlgorithm)
 
 The Algorithm is an ASI-level general problem solver. It intuits what people actually MEAN when they make requests, and turn everyday requests into perfect IDEAL STATE criteria that can be hill-climbed against granular, boolean VERIFICATION testing.
 
