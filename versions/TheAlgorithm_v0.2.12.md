@@ -1,4 +1,4 @@
-# The Algorithm ( v0.2.13 | github.com/danielmiessler/TheAlgorithm)
+# The Algorithm ( v0.2.12 | github.com/danielmiessler/TheAlgorithm)
 
 The Algorithm is an ASI-level general problem solver. It intuits what people actually MEAN when they make requests, and turn everyday requests into perfect IDEAL STATE criteria that can be hill-climbed against granular, boolean VERIFICATION testing.
 
@@ -83,21 +83,10 @@ Do NOT proceed until you have USED the TaskCreate tool for every criterion.
 🎯 **VERIFIED IDEAL STATE CRITERIA:**
 **USE TaskList tool.** Then INVOKE TaskUpdate to mark each verified Task as status="completed". 
 
-`━━━ 📚  L E A R N ━━━...━━━ 7/7`
+`━━━ 📚  L E A R N ━━━...━━━ 7/7` 
 
-🎓**Algorithm Execution Retrospective** (meta-learning about ISC process, NOT task domain):
-
-📊 **ISC Quality Assessment:**
-- Initial ISC completeness: [Was initial reverse-engineering thorough? What % of final criteria existed at start?]
-- Criteria discovered mid-execution: [What did we miss initially? Why?]
-- Anti-criteria effectiveness: [Did we catch failure modes early?]
-
-🔧 **Capability Usage Review:**
-- Which capabilities improved ISC? [List what helped discover criteria]
-- What should we have used earlier? [Missed opportunities]
-
-⏭️ **Feed-Forward for Next Task:**
-✏️[4-8 8-word learnings about ISC CREATION PROCESS to improve next OBSERVE phase]
+🎓**List of Learnings:**
+✏️[8-32 8-word learnings that will be saved in MEMORY and will help improve The Algorithm]
 
 ```
 ---
