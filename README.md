@@ -5,7 +5,7 @@
 
   **An experiment in systematic problem-solving**
 
-  [![Version](https://img.shields.io/badge/version-0.1-blue.svg)](https://github.com/danielmiessler/TheAlgorithm/releases)
+  [![Version](https://img.shields.io/badge/version-0.2.22-blue.svg)](https://github.com/danielmiessler/TheAlgorithm/releases)
   [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
   [![PAI](https://img.shields.io/badge/PAI-integrated-purple.svg)](https://github.com/danielmiessler/PAI)
   [![Status](https://img.shields.io/badge/status-experimental-orange.svg)]()
@@ -215,6 +215,13 @@ Not sure if this is achievable consistently, but that's the experiment.
 ---
 
 ## 🔄 Version History
+
+### v0.2.22 (2026-01-28)
+- **Nothing Escapes the Algorithm** -- Reframed modes as depth levels, not whether the Algorithm runs
+- **Capability Selection Block** -- First-class element in THINK phase with justification and composition patterns
+- **7 Composition Patterns** -- Pipeline, TDD Loop, Fan-out, Fan-in, Gate, Escalation, Specialist
+- **Execution Tiers** -- Conceptual framework for recursive sub-algorithm execution (Tiers 0-3)
+- **AI-Powered Depth Detection** -- Inference-based depth classification over keyword matching
 
 ### v0.1 (2026-01-24)
 - Initial release
