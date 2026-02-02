@@ -5,7 +5,7 @@
 
   **An experiment in systematic problem-solving**
 
-  [![Version](https://img.shields.io/badge/version-0.2.22-blue.svg)](https://github.com/danielmiessler/TheAlgorithm/releases)
+  [![Version](https://img.shields.io/badge/version-0.2.34-blue.svg)](https://github.com/danielmiessler/TheAlgorithm/releases)
   [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
   [![PAI](https://img.shields.io/badge/PAI-integrated-purple.svg)](https://github.com/danielmiessler/PAI)
   [![Status](https://img.shields.io/badge/status-experimental-orange.svg)]()
@@ -215,6 +215,63 @@ Not sure if this is achievable consistently, but that's the experiment.
 ---
 
 ## 🔄 Version History
+
+### v0.2.34 (2026-02-02)
+- **Builder-Validator Pair Pattern** -- New `Pair` composition pattern: every work unit gets a Builder agent and an independent Validator agent
+- **Agent Self-Validation** -- Agents receive validation contracts (mechanical checks) and verify their own output before reporting completion
+- **ISC Dependency Graph** -- ISC criteria declare dependencies via `addBlockedBy`/`addBlocks` for wave-based parallel execution
+
+### v0.2.33 (2026-02-02)
+- **Continuous Recommendation** -- Replaces Two-Pass Selection; CapabilityRecommender is re-invocable at any phase boundary with enriched context
+- **Dynamic Ecosystem Discovery** -- Hook reads Agents/ directory and skill-index.json at runtime instead of hardcoded lists
+- **Holistic Capability Matrix** -- Hook output is a coherent strategy (strategy, agents, skills, timing, pattern, sequence, quality, constraints)
+
+### v0.2.32 (2026-02-02)
+- **Structured Evidence Requirements** -- ISC verification requires evidence type, source, and content (no more "verified" without proof)
+- **Retry Loop** -- DIAGNOSE -> CHANGE -> RE-EXECUTE loop (max 3 iterations) when VERIFY fails; change is mandatory
+- **Ownership Check** -- VERIFY begins with approach reflection: what I did, alternatives, and whether I'd choose the same again
+
+### v0.2.31 (2026-02-02)
+- **Structural Agent Enforcement** -- New AgentExecutionGuard hook (PreToolUse on Task) warns on foreground agent spawns
+- **Three-Layer Architecture** -- Detection (CapabilityRecommender) -> Enforcement (AgentExecutionGuard) -> Capture (AgentOutputCapture)
+- **Enforce Structurally, Not Instructionally** -- Philosophy principle #10; hooks fire regardless of context pressure
+
+### v0.2.30 (2026-02-02)
+- **Mandatory Background Agents** -- All Task calls must use run_in_background: true with polling; foreground agents banned
+- **Non-Blocking Voice** -- Voice curl commands use `&` suffix for fire-and-forget execution
+- **Agent Progress Reporting** -- Poll and report agent status every 15-30 seconds
+
+### v0.2.29 (2026-02-01)
+- **Timing-Aware Execution** -- New timing tiers (fast/standard/deep) flow from hook through agents; model selection follows timing
+- **Agent Prompt Scoping** -- Every agent prompt MUST include `## Scope` with validated timing tier
+- **Model Selection Interaction** -- fast->haiku, standard->sonnet, deep->opus (preference, not hard rule)
+
+### v0.2.28 (2026-02-01)
+- **Git Worktrees** -- Parallel solution attempts in isolated worktrees when multiple approaches exist for the same problem
+- **Tournament Pattern** -- New composition pattern: `[A, B, C] -> Evaluate -> Winner` for competing solutions
+- **Compete, Don't Guess** -- Philosophy principle #8; try all viable approaches and pick the winner
+
+### v0.2.27 (2026-01-31)
+- **Never-Block Rule** -- Operations > 10s MUST run as background agents with progress reporting
+- **TIME TRIAGE** -- Mandatory PLAN phase section: estimate duration, choose execution mode, set update intervals
+- **Quick Answer First** -- For verification tasks, report result immediately, then offer to investigate
+
+### v0.2.26 (2026-01-31)
+- **Voice Line Constraint** -- The spoken summary at the end of every response must be 8-24 words
+- **Internal phases unconstrained** -- OBSERVE through LEARN remain as detailed as needed; only the voice line is constrained
+
+### v0.2.25 (2026-01-30)
+- **Parallel-by-Default Execution** -- Independent tasks MUST run concurrently; serial execution only for data dependencies
+- **Fan-out Default** -- 3+ independent workstreams automatically use the Fan-out pattern
+
+### v0.2.24 (2026-01-29)
+- **Mandatory Structured Questions** -- All questions to the user must use a structured question tool with options, not inline text
+- **Interaction Contract** -- Ensures consistent UX, trackable answers, and explicit question handling
+
+### v0.2.23 (2026-01-28)
+- **Two-Pass Capability Selection** -- Hook provides draft hints (Pass 1), THINK validates against ISC (Pass 2)
+- **Thinking Tools Assessment** -- Six thinking tools evaluated with justify-exclusion principle for every FULL request
+- **Skill Check in THINK** -- Hook skill hints validated against ISC criteria
 
 ### v0.2.22 (2026-01-28)
 - **Nothing Escapes the Algorithm** -- Reframed modes as depth levels, not whether the Algorithm runs
