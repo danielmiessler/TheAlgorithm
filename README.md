@@ -5,7 +5,7 @@
 
   **An experiment in systematic problem-solving**
 
-  [![Version](https://img.shields.io/badge/version-0.2.34-blue.svg)](https://github.com/danielmiessler/TheAlgorithm/releases)
+  [![Version](https://img.shields.io/badge/version-0.3.4-blue.svg)](https://github.com/danielmiessler/TheAlgorithm/releases)
   [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
   [![PAI](https://img.shields.io/badge/PAI-integrated-purple.svg)](https://github.com/danielmiessler/PAI)
   [![Status](https://img.shields.io/badge/status-experimental-orange.svg)]()
@@ -215,6 +215,14 @@ Not sure if this is achievable consistently, but that's the experiment.
 ---
 
 ## 🔄 Version History
+
+### v0.3.4 (2026-02-03)
+- **CAPABILITY AUDIT block** — Mandatory in OBSERVE phase, shows CONSIDERED vs SELECTED capabilities
+- **TIME SLA system** — Instant/Fast/Standard/Deep determines agent budget
+- **Reverse Engineering expansion** — Explicit/implied wants AND don't-wants, plus gotchas
+- **Agent Instructions** — CRITICAL requirement for context, SLA, and output format when spawning agents
+- **Algorithm Concept section** — Full 9-point philosophy explaining why ISC matters
+- **Voice Phase Announcements** — Progress visibility during long operations
 
 ### v0.2.34 (2026-02-02)
 - **Builder-Validator Pair Pattern** -- New `Pair` composition pattern: every work unit gets a Builder agent and an independent Validator agent
