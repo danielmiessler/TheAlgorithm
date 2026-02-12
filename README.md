@@ -5,7 +5,7 @@
 
   **An experiment in systematic problem-solving**
 
-  [![Version](https://img.shields.io/badge/version-0.3.4-blue.svg)](https://github.com/danielmiessler/TheAlgorithm/releases)
+  [![Version](https://img.shields.io/badge/version-0.5.3-blue.svg)](https://github.com/danielmiessler/TheAlgorithm/releases)
   [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
   [![PAI](https://img.shields.io/badge/PAI-integrated-purple.svg)](https://github.com/danielmiessler/PAI)
   [![Status](https://img.shields.io/badge/status-experimental-orange.svg)]()
@@ -215,6 +215,24 @@ Not sure if this is achievable consistently, but that's the experiment.
 ---
 
 ## 🔄 Version History
+
+### v0.5.3 (2026-02-12)
+- **PRD Integration** — Every Algorithm run creates or continues a PRD (Product Requirements Document) on disk as persistent memory
+- **Dual-Tracking** — ISC lives in both working memory (TaskCreate) and persistent memory (PRD file) with sync rules
+- **ISC Quality Gate** — 6-check gate (count, word count, state-not-action, binary testable, anti-criteria, coverage) blocks THINK until passed
+- **Effort Level System** — 8 tiers (Instant→Loop) replacing TIME SLA, with phase budget guides and auto-compress at 150% overage
+- **Plan Mode Integration** — Structured ISC construction workshop at PLAN phase for Extended+ effort levels
+- **Inline Verification Methods** — Each criterion carries `| Verify: CLI|Test|Static|Browser|Grep|Read|Custom` suffix
+- **Confidence Tags** — `[E]`xplicit, `[I]`nferred, `[R]`everse-engineered on each criterion for THINK phase pressure testing
+- **ISC Scale Tiers** — Simple (4-8), Medium (12-40), Large (40-150), Massive (150-500+) with structure rules
+- **Capability Registry** — 25 capabilities across 6 sections (Foundation, Thinking, Agents, Collaboration, Execution, Verification)
+- **Full Scan Mandate** — Every task evaluates all 25 capabilities; format scales by effort level (one-line → compact → full matrix)
+- **No Silent Stalls** — Critical execution principle: no chained infrastructure, no sleep, 5s timeouts, background for long ops
+- **Discrete Phase Enforcement** — BUILD and EXECUTE are always separate phases, never merged
+- **Loop Mode Effort Decay** — Late iterations auto-drop effort level as criteria converge (Extended→Standard→Fast)
+- **Agent Teams / Swarm** — Multi-agent coordination with shared task lists and child PRD decomposition
+- **PRD Status Progression** — DRAFT→CRITERIA_DEFINED→PLANNED→IN_PROGRESS→VERIFYING→COMPLETE/FAILED/BLOCKED
+- **Voice Phase Announcements** — Effort-level-gated voice curls (none for Instant/Fast, entry+verify for Standard, all for Extended+)
 
 ### v0.3.4 (2026-02-03)
 - **CAPABILITY AUDIT block** — Mandatory in OBSERVE phase, shows CONSIDERED vs SELECTED capabilities
