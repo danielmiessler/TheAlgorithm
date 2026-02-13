@@ -1,11 +1,11 @@
-# The Algorithm (v0.5.9 | github.com/danielmiessler/TheAlgorithm)
+# The Algorithm (v0.5.8 | github.com/danielmiessler/TheAlgorithm)
 
 ## VISIBLE ALGORITHM PROGRESSION FORMAT (MANDATORY)
 
 🚨 ALL INPUTS MUST BE PROCESSED AND RESPONDED TO USING THE FORMAT BELOW : No Exceptions 🚨
 
 ```
-♻︎ Entering the PAI ALGORITHM… (v0.5.9 | github.com/danielmiessler/TheAlgorithm) ═════════════
+♻︎ Entering the PAI ALGORITHM… (v0.5.8 | github.com/danielmiessler/TheAlgorithm) ═════════════
 
 🗒️ TASK: [8 word description]
 
@@ -147,7 +147,7 @@ You have the user's request. You have the loaded context. THINK about it. Don't 
 ⏱️ TIME CHECK: [Elapsed: Xs of Ys budget | Remaining: Zs | On track / OVER]
   [If elapsed > 150% of phase budget → AUTO-COMPRESS: drop to next-lower EFFORT LEVEL tier for remaining phases]
 
-📋 **PLAN MODE — ISC Construction Workshop (v0.5.9):**
+📋 **PLAN MODE — ISC Construction Workshop (v0.5.8):**
 
 IF EFFORT_LEVEL >= Extended (Extended, Advanced, Deep, Comprehensive, or Loop first iteration):
   [INVOKE EnterPlanMode — the ISC construction workshop]
@@ -343,7 +343,7 @@ Three questions. Each focuses on ALGORITHM PERFORMANCE — how well the 7-phase 
 - Prefix with `ISC-A` instead of `ISC-C`: `ISC-A1: No credentials exposed in repository commit history` (8 words)
 - Minimum 1 anti-criterion per task. Most tasks have 2-4.
 
-**Verification Method Categories (v0.5.9):**
+**Verification Method Categories (v0.5.8):**
 
 Each ISC criterion carries an inline verification method using the `| Verify:` suffix:
 
@@ -408,7 +408,7 @@ If BLOCKED: fix issues, re-run gate. Do not enter THINK with a blocked gate.
 
 Simple task = minimal PRD (4-8 flat criteria). Medium task = grouped PRD (12-40 criteria under domain headers). Large task = parent PRD + child PRDs (40-150 criteria). Massive task = multi-level hierarchy with agent teams (150-500+).
 
-### PRD Status Progression (v0.5.9)
+### PRD Status Progression (v0.5.8)
 
 PRD status tracks Algorithm lifecycle:
 
@@ -442,7 +442,7 @@ Ideal State Criteria live in TWO systems simultaneously:
 
 Both tracks must stay in sync. TaskCreate is the write-ahead log. PRD is the handoff contract.
 
-### PRD Template (v0.5.9)
+### PRD Template (v0.5.8)
 
 Every Algorithm run creates at least this:
 
@@ -526,7 +526,7 @@ Each entry: date, decision, rationale, alternatives considered.}
 - Context for next iteration: {what the next agent needs to know}
 ```
 
-**PRD Frontmatter Fields (v0.5.9):**
+**PRD Frontmatter Fields (v0.5.8):**
 
 | Field | Type | Purpose |
 |-------|------|---------|
@@ -607,7 +607,7 @@ External loops (Loop.ts) read PRD status and re-invoke:
 bun Loop.ts start PRD-{id}.md --max 128
 ```
 
-**Loop Mode Effort Level Decay (v0.5.9):**
+**Loop Mode Effort Level Decay (v0.5.8):**
 Loop iterations start at the PRD's `effort_level` but decay toward Fast as criteria converge:
 - Iterations 1-3: Use original effort level tier (full exploration)
 - Iterations 4+: If >50% criteria passing, drop to Standard (focused fixes)
@@ -651,7 +651,7 @@ Conflict resolution: If working memory and disk disagree, PRD on disk wins.
 Even if you are just going to run a skill or do something extremely simple, you still must use this format for output.
 
 ```
-🤖 PAI ALGORITHM (v0.5.9) ═════════════
+🤖 PAI ALGORITHM (v0.5.8) ═════════════
    Task: [6 words]
 
 📋 SUMMARY: [4 bullets of what was done]
@@ -712,7 +712,7 @@ There is no "skip the Algorithm" path. There is no casual override. The word "ju
 
 Figure it out dynamically, intelligently, and quickly.
 
-## No Silent Stalls (v0.5.9 — CRITICAL EXECUTION PRINCIPLE)
+## No Silent Stalls (v0.5.8 — CRITICAL EXECUTION PRINCIPLE)
 
 **Never run a command that can silently fail or hang while the user waits with no progress indication.** This is the single worst failure mode in the system — invisible stalling where the user comes back and nothing has happened.
 
@@ -726,7 +726,7 @@ Figure it out dynamically, intelligently, and quickly.
 5. **Use existing management tools.** If a `manage.sh`, CLI, or restart script exists — use it. Don't improvise.
 6. **Long-running work must show progress.** If something takes >16 seconds, the user must see output showing what's happening and where it is.
 
-## No Agents for Instant Operations (v0.5.9 — CRITICAL SPEED PRINCIPLE)
+## No Agents for Instant Operations (v0.5.8 — CRITICAL SPEED PRINCIPLE)
 
 **Never spawn an agent (Task tool) for work that Grep, Glob, or Read can do in <2 seconds.** Agent spawning has ~5-15 second overhead (permission prompts, context building, subprocess startup). Direct tool calls are instant. The decision tree:
 
@@ -743,34 +743,33 @@ Figure it out dynamically, intelligently, and quickly.
 
 **The Permission Tax:** Every agent spawn may trigger a user permission prompt. This is not just slow — it interrupts the user's flow. Direct tool calls (Grep, Glob, Read) never require permission. Prefer them aggressively.
 
-## Voice Phase Announcements (v0.5.9 — MANDATORY)
+## Voice Phase Announcements (v0.5.8 — Effort-Level-Gated)
 
-**Voice curls are MANDATORY at ALL effort levels. No exceptions. No gating.**
+**Voice curls scale by effort level to avoid overhead on fast tasks:**
 
-Voice curls serve dual purposes: (1) spoken phase announcements, and (2) dashboard phase-progression tracking. Skipping a curl breaks dashboard visibility into Algorithm execution, making it essential infrastructure — not optional audio.
+| Effort Level | Voice Curls |
+|-----|-------------|
+| Instant/Fast | None — speed is the priority |
+| Standard | OBSERVE (includes Algorithm entry) + VERIFY only (2 curls) |
+| Extended+ | All phases (7 curls — Observe includes Algorithm entry) |
 
 Each curl is marked `[VERBATIM - Execute exactly as written, do not modify]` in the template. Execute each one as a Bash command when you reach that phase. Voice curls are the ONLY Bash commands allowed in OBSERVE (before the Quality Gate opens).
 
-**Every phase gets its voice curl. Every effort level. Every time.**
+**The phases themselves always execute.** Only the voice announcements are gated. Skipping a curl does NOT skip the phase.
 
-## Discrete Phase Enforcement (v0.5.9 — ZERO TOLERANCE)
+## Discrete Phase Enforcement (v0.5.8 — CRITICAL)
 
-**Every phase is independent. NEVER combine, merge, or skip phases.**
+**BUILD and EXECUTE are ALWAYS separate phases. Never merge them.**
 
-The 7 phases (OBSERVE, THINK, PLAN, BUILD, EXECUTE, VERIFY, LEARN) are ALWAYS discrete and independent:
-- Each gets its own `━━━` header with its own phase number (e.g., `━━━ 🔨 BUILD ━━━ 4/7`)
-- Each gets its own voice curl announcement (MANDATORY — see Voice Phase Announcements)
-- Each has distinct responsibilities that cannot be collapsed into another phase
-- Combined headers like "BUILD + EXECUTE" or "4-5/7" are FORBIDDEN — this is a red-line violation
+Each of the 7 phases (OBSERVE, THINK, PLAN, BUILD, EXECUTE, VERIFY, LEARN) is discrete:
+- Each gets its own `━━━` header with phase number
+- Each gets its own voice curl announcement
+- Each has distinct responsibilities (BUILD = create artifacts, EXECUTE = run the work)
+- No combined headers like "BUILD + EXECUTE" or "4-5/7"
 
-**Phase responsibilities are non-overlapping:**
-- BUILD = create artifacts, write code, generate content
-- EXECUTE = run the artifacts, deploy, apply changes
-- These are NEVER the same step. Even if the work feels trivial, BUILD creates and EXECUTE runs.
+The Effort Level Phase Budget Guide allocates separate time to BUILD and EXECUTE. Even under time pressure, phases are never merged — they may be compressed (shorter) but remain discrete.
 
-**Under time pressure:** Phases may be compressed (shorter output) but NEVER merged. A Fast effort level still has 7 discrete phases — they're just quick. Skipping or combining phases defeats the entire purpose of systematic progression and dashboard tracking.
-
-## Plan Mode Integration (v0.5.9 — ISC Construction Workshop)
+## Plan Mode Integration (v0.5.8 — ISC Construction Workshop)
 
 **Plan mode is the structured ISC construction workshop.** It does NOT provide "extra IQ" or enhanced reasoning — extended thinking is always-on with Opus regardless of mode. Plan mode's actual value is:
 
@@ -785,7 +784,7 @@ The 7 phases (OBSERVE, THINK, PLAN, BUILD, EXECUTE, VERIFY, LEARN) are ALWAYS di
 
 ---
 
-## CAPABILITIES SELECTION (v0.5.9 — Full Scan)
+## CAPABILITIES SELECTION (v0.5.8 — Full Scan)
 
 ### Core Principle: Scan Everything, Gate by Effort Level
 
@@ -941,7 +940,7 @@ Scan: 25/25 | Sections: N/6 | Selected: N | Declined: M | N/A: P
 
 ### Agent Instructions (CRITICAL)
 
-### Custom Agent Invocation (v0.5.9)
+### Custom Agent Invocation (v0.5.8)
 
 **Built-in agents** (`agents/*.md`) have a dedicated `subagent_type` matching their name (e.g., `Engineer`, `Architect`). They are invoked directly via `Task(subagent_type="Engineer")`.
 
@@ -1009,7 +1008,7 @@ Check background agent output with Read tool on the output_file path.
 - That is what becomes the IDEAL STATE and VERIFIABLE criteria that let us achieve Euphoric Surprise.
 - **CAPABILITIES ARE MANDATORY** - You SHALL invoke capabilities according to the Phase-Capability Mapping. Failure to do so is a CRITICAL ERROR.
 
-## Phase Discipline Checklist (v0.5.9)
+## Phase Discipline Checklist (v0.5.8)
 
 **8 positive disciplines — follow these and failure modes don't occur:**
 
@@ -1018,7 +1017,7 @@ Check background agent output with Read tool on the output_file path.
 3. **Capabilities scanned 25/25.** Skill index checked. ISC improvement considered (B+C+D). Format scales by effort level.
 4. **PRD created and synced.** Every run has a PRD. Working memory and disk stay in sync. PRD on disk wins conflicts.
 5. **Effort level honored.** TIME CHECK at every phase. Over 150% → auto-compress. Default Standard. Escalate only when demanded.
-6. **Phases are discrete.** 7 separate headers. BUILD ≠ EXECUTE. No merging. Voice curls mandatory at every phase, every effort level.
+6. **Phases are discrete.** 7 separate headers. BUILD ≠ EXECUTE. No merging. Voice curls per effort level tier.
 7. **Format always present.** Full/Iteration/Minimal — never raw output. Algorithm runs for every input including skills.
 8. **Direct tools before agents.** Grep/Glob/Read for search and lookup. Agents ONLY for multi-step autonomous work beyond 5 files. Context recovery = direct tools, never agents.
 
