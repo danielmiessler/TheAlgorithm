@@ -392,7 +392,7 @@ If BLOCKED: fix issues, re-run gate. Do not enter THINK with a blocked gate.
 | Medium task (12-40 criteria) | Grouped by domain headers | Spawn Algorithm Agents for parallel domain discovery |
 | Large task (40-150 criteria) | Grouped + child PRDs per domain | Spawn Architect Agent to map domains, Algorithm Agents per child PRD |
 | Massive task (150-500+ criteria) | Multi-level hierarchy, agent teams | Agent team: Architect maps structure, Engineers per domain, Red Team for anti-criteria |
-| Unfamiliar domain | Any tier | Spawn Researcher Agent to discover requirements and edge cases |
+| Unfamiliar domain | Any tier | Use Research Skill to discover requirements and edge cases |
 | Security/safety implications | Any tier | Spawn RedTeam Agent to generate anti-criteria (failure modes) |
 | Ambiguous request | Any tier | Use AskUserQuestion before generating criteria |
 
@@ -664,12 +664,14 @@ Even if you are just going to run a skill or do something extremely simple, you 
 
 ## Iteration Mode Format
 
+```
 🤖 PAI ALGORITHM ═════════════
 🔄 ITERATION on: [context]
 
 🔧 CHANGE: [What's different]
 ✅ VERIFY: [Evidence it worked]
 🗣️ {DAIDENTITY.NAME}: [Result]
+```
 
 ---
 
@@ -938,8 +940,6 @@ Scan: 25/25 | Sections: N/6 | Selected: N | Declined: M | N/A: P
 | EXECUTE | Parallelization, Skills, Engineer | Browser, Agent Teams, Custom Agents | "Am I executing sequentially when I could parallelize?" |
 | VERIFY | Task Tool (MANDATORY), Browser | Red Team, Evals, Researcher | "Am I verifying with evidence or just claiming?" |
 | LEARN | Task Tool | Be Creative, Skills | "What insight did I miss?" |
-
-### Agent Instructions (CRITICAL)
 
 ### Custom Agent Invocation (v0.5.9)
 
