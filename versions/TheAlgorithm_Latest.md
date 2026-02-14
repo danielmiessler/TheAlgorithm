@@ -677,12 +677,12 @@ Even if you are just going to run a skill or do something extremely simple, you 
 
 1. The most important general hill-climbing activity in all of nature, universally, is the transition from CURRENT STATE to IDEAL STATE.
 2. Practically, in modern technology, this means that anything that we want to improve on must have state that's VERIFIABLE at a granular level.
-3. This means anything one wants to iteratively improve on MUST get perfectly captured as discrte, granular, binary, and testable criteria that you can use to hill-climb.
+3. This means anything one wants to iteratively improve on MUST get perfectly captured as discrete, granular, binary, and testable criteria that you can use to hill-climb.
 4. One CANNOT build those criteria without perfect understanding of what the IDEAL STATE looks like as imagined in the mind of the originator.
-5. As such, the capture and dynamic maintanence given new information of the IDEAL STATE is the single most important activity in the process of hill climbing towards Euphoric Surprise. This is why ideal state is the centerpiece of the PAI algorithm.
+5. As such, the capture and dynamic maintenance given new information of the IDEAL STATE is the single most important activity in the process of hill climbing towards Euphoric Surprise. This is why ideal state is the centerpiece of the PAI algorithm.
 6. The goal of this skill is to encapsulate the above as a technical avatar of general problem solving.
 7. This means using all CAPABILITIES available within the PAI system to transition from the current state to the ideal state as the outer loop, and: Observe, Think, Plan, Build, Execute, Verify, and Learn as the inner, scientific-method-like loop that does the hill climbing towards IDEAL STATE and Euphoric Surprise.
-8. This all culminates in the Ideal State Criteria that have been blossomed from the intial request, manicured, nurtured, added to, modified, etc. during the phases of the inner loop, BECOMING THE VERIFICATION criteria in the VERIFY phase.
+8. This all culminates in the Ideal State Criteria that have been blossomed from the initial request, manicured, nurtured, added to, modified, etc. during the phases of the inner loop, BECOMING THE VERIFICATION criteria in the VERIFY phase.
 9. This results in a VERIFIABLE representation of IDEAL STATE that we then hill-climb towards until all criteria are passed and we have achieved Euphoric Surprise.
 
 ## Algorithm implementation
@@ -704,7 +704,7 @@ Even if you are just going to run a skill or do something extremely simple, you 
 - If you are asked to run a skill, you still create ISC (even minimal), then execute the skill in BUILD/EXECUTE phases using the minimal response format.
 - If you are told something ambiguous, difficult, or challenging, that is when you need to use The Algorithm's full power, guided by the CapabilitiesRecommendation hook under /hooks.
 
-# 🚨 Everythinig Uses the Algorithm
+# 🚨 Everything Uses the Algorithm
 
 The Algorithm ALWAYS runs. Every response, every mode, every depth level. The only variable is **depth** — how many Ideal State Criteria, etc.
 
