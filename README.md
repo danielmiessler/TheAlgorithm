@@ -5,7 +5,7 @@
 
   **An experiment in systematic problem-solving**
 
-  [![Version](https://img.shields.io/badge/version-0.5.3-blue.svg)](https://github.com/danielmiessler/TheAlgorithm/releases)
+  [![Version](https://img.shields.io/badge/version-0.5.9-blue.svg)](https://github.com/danielmiessler/TheAlgorithm/releases)
   [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
   [![PAI](https://img.shields.io/badge/PAI-integrated-purple.svg)](https://github.com/danielmiessler/PAI)
   [![Status](https://img.shields.io/badge/status-experimental-orange.svg)]()
@@ -60,7 +60,7 @@ I'm testing three main components:
 
 ### 1. **Ideal State Criteria (ISC)**
 Specific, testable statements about what success looks like:
-- **Exactly 8 words** - Keeps them focused
+- **8-12 words** - Keeps them focused
 - **Granular** - One thing per criterion
 - **Discrete** - Clear boundaries
 - **Testable** - Binary YES/NO you can check quickly
@@ -143,11 +143,11 @@ I'm using semantic versioning:
 
 ```
 TheAlgorithm/
-  TheAlgorithm.md           # Current version
   versions/
-    v0.1.md                 # Frozen snapshots
-    v0.2.md
-  CHANGELOG.md              # What changed
+    TheAlgorithm_Latest.md  # Current version
+    TheAlgorithm_v0.5.9.md  # Frozen snapshots
+    TheAlgorithm_v0.5.8.md
+    ...
 ```
 
 **Version bumps:**
@@ -165,7 +165,7 @@ TheAlgorithm/
 
 ## 📚 Documentation
 
-The full spec is in **[TheAlgorithm.md](./TheAlgorithm.md)**:
+The full spec is in **[TheAlgorithm_Latest.md](./versions/TheAlgorithm_Latest.md)**:
 - All 7 phases in detail
 - ISC criteria requirements
 - Examples and anti-patterns
@@ -215,6 +215,23 @@ Not sure if this is achievable consistently, but that's the experiment.
 ---
 
 ## 🔄 Version History
+
+### v0.5.9 (2026-02-13)
+- **Phase Discipline Checklist** — 8 positive disciplines and 4 red lines for systematic phase execution
+- **No Agents for Instant Operations** — Direct tools (Grep/Glob/Read) required when answer obtainable in <2 seconds
+- **Voice Phase Announcements mandatory at ALL effort levels** — No gating; curls serve both audio and dashboard tracking
+- **Plan Mode clarified** — Not "extra IQ" but structured exploration, read-only constraint, and approval checkpoint
+- **Capability Audit format scales by effort level** — One-line (Instant/Fast), compact (Standard), full matrix (Extended+)
+- **ISC improvement emphasis** — Capabilities evaluated for ISC quality improvement (primary) before execution (secondary)
+- **Cross-section combination guidance** — Single-section capability selections flagged as insufficient
+
+### v0.5.8 (2026-02-12)
+- **Context Recovery** — Conditional prior-work recovery with hard speed gate (≤34s total) using Grep/Glob/Read only
+- **Recovery Mode Detection** — Same-session, post-compaction, and cold-start modes with appropriate strategies
+- **ISC-Aware Resumption** — Resume from last incomplete phase using PRD frontmatter fields
+- **Algorithm Reflection Readback** — Apply past Q2/Q3 answers to improve current ISC and capability selection
+- **Prerequisite Validation** — ENV, DEPS, STATE, FILES checks before execution planning
+- **File-Edit Manifest** — Extended+ effort level maps criteria to file changes for mechanical BUILD execution
 
 ### v0.5.3 (2026-02-12)
 - **PRD Integration** — Every Algorithm run creates or continues a PRD (Product Requirements Document) on disk as persistent memory
