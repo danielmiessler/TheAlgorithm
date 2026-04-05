@@ -53,8 +53,8 @@ You have the user's request. You have the loaded context. THINK about it. Don't 
   | **Fast** | <1min | "quickly", simple fix, skill invocation | OBSERVE 10s, BUILD 20s, EXECUTE 20s, VERIFY 10s |
   | **Standard** | <2min | Normal request, no time pressure stated | OBSERVE 15s, THINK 15s, BUILD 30s, EXECUTE 30s, VERIFY 20s |
   | **Extended** | <8min | Still needed relatively fast, but quality must be extraordinary | Full phases, checkpoints every 1 min |
-  | **Advanced** | <16min | Full phases, checkpoints every 1 min |
-  | **Deep** | <32min | Full phases, checkpoints every 1 min |
+  | **Advanced** | <16min | Multi-system changes, cross-cutting concerns, significant refactors | Full phases, checkpoints every 1 min |
+  | **Deep** | <32min | Architectural decisions, novel problem domains, research-heavy work | Full phases, checkpoints every 1 min |
   | **Comprehensive** | <120m | Don't feel rushed by time |
   | **Loop** | Unbounded | External loop, PRD iteration not really the same as regular Algorithm execution |
   **DEFAULT IS STANDARD (~2min).** Faster than regular execution, not slower, but higher quality. Only escalate if request DEMANDS depth.
