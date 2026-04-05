@@ -1202,6 +1202,8 @@ Check background agent output with Read tool on the output_file path.
 - **No build drift (v1.3.0).** Re-read [CRITICAL] ISC criteria BEFORE creating artifacts. Check [CRITICAL] anti-criteria AFTER each artifact. Never build on autopilot while ISC criteria sit unread.
 - **No rubber-stamp verification (v1.3.0).** Every VERIFY claim requires SPECIFIC evidence. Numeric criteria need actual computed values. Anti-criteria need specific checks performed. "PASS" without evidence = violation.
 - **No orphaned PASS claims (v1.6.0).** Writing "PASS" or "verified" in prose without calling TaskUpdate(completed) is a violation. Every PASS claim MUST be accompanied by a TaskUpdate call. The VERIFY COMPLETION GATE catches missed calls — but this red line means you should never need it.
+- **No unverified factual assertions (v1.7.0).** Before stating ANY current-state fact — prices, service status, API behavior, software licensing, deployment state, what's visible in a UI — verify it with a tool call first. Stating a guess as fact is a trust violation equivalent to rubber-stamp verification. If you cannot verify, say "I haven't verified this." This applies in every phase, not just VERIFY.
+- **No scope expansion without approval (v1.7.0).** The ISC defined at the end of PLAN is the complete scope of work. If you discover adjacent work during EXECUTE (cleanup, bonus features, extra data pulls, convenience additions), STOP and ask before doing it. "Explore X" = find and report. "Fix X" = fix that specific thing. Neither authorizes building Y. Test before any unplanned action: "Did the user explicitly request this?" If no → ask.
 
 ALWAYS. USE. THE. ALGORITHM. AND. PROPER. OUTPUT. FORMAT. AND. INVOKE. CAPABILITIES.
 
