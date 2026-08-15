@@ -5,23 +5,23 @@
 
   **An experiment in systematic problem-solving**
 
-  [![Version](https://img.shields.io/badge/version-6.3.0-blue.svg)](https://github.com/danielmiessler/TheAlgorithm/releases)
+  [![Docs](https://img.shields.io/badge/docs-reference-blue.svg)](./TheAlgorithm.md)
   [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-  [![PAI](https://img.shields.io/badge/PAI-integrated-purple.svg)](https://github.com/danielmiessler/PAI)
+  [![LifeOS](https://img.shields.io/badge/LifeOS-integrated-purple.svg)](https://github.com/danielmiessler/LifeOS)
   [![Status](https://img.shields.io/badge/status-experimental-orange.svg)]()
 
-  [The Idea](#the-idea) • [How It Works](#how-it-works) • [PAI Integration](#pai-integration) • [Versioning](#versioning) • [Documentation](#documentation)
+  [The Idea](#the-idea) • [How It Works](#how-it-works) • [LifeOS Integration](#-lifeos-integration) • [Versioning](#versioning) • [Documentation](#documentation)
 </div>
 
 ---
 
 ## 🎯 The Idea
 
-TheAlgorithm is the universal mechanism inside [PAI (Personal AI Infrastructure)](https://github.com/danielmiessler/PAI) — the **Life Operating System** I'm building to magnify human capability. PAI turns AI from a chatbot you talk to into a system that runs your life — knowing your goals, people, workflows, current state, and ideal state — and continuously hill-climbs you from one to the other. The mechanism that does the climbing is TheAlgorithm.
+TheAlgorithm is the universal mechanism inside [LifeOS](https://github.com/danielmiessler/LifeOS) — the **Life Operating System** I'm building to magnify human capability. LifeOS turns AI from a chatbot you talk to into a system that runs your life — knowing your goals, people, workflows, current state, and ideal state — and continuously hill-climbs you from one to the other. The mechanism that does the climbing is TheAlgorithm.
 
 It's universal because every task — shipping code, writing an essay, making a hire, sending an email, designing a feature — is a transition from **CURRENT STATE → IDEAL STATE** pursued through verifiable iteration.
 
-The bigger story is the **Human 2.0 → Human 3.0** transition: from corporate existence where value is defined by job title, to creative self-expression where individuals define themselves through unique value creation. AI is what makes that possible — but only if you have the scaffolding to point it at your real life, your real goals, and your real definition of "done." PAI is the scaffolding. TheAlgorithm is what runs at its center.
+The bigger story is the **Human 2.0 → Human 3.0** transition: from corporate existence where value is defined by job title, to creative self-expression where individuals define themselves through unique value creation. AI is what makes that possible — but only if you have the scaffolding to point it at your real life, your real goals, and your real definition of "done." LifeOS is the scaffolding. TheAlgorithm is what runs at its center.
 
 **The goal:** Euphoric Surprise — answers that click in a way you couldn't have predicted but instantly recognize as true.
 
@@ -111,13 +111,13 @@ The end goal isn't passing the criteria — it's the experience the user has whe
 
 ---
 
-## 🔗 PAI Integration
+## 🔗 LifeOS Integration
 
-I'm using this in PAI - every interaction follows the algorithm structure. It's working well so far, but I'm still experimenting.
+I'm using this in LifeOS - every interaction follows the algorithm structure. It's working well so far, but I'm still experimenting.
 
 ### Configuration
 
-PAI can load TheAlgorithm three ways:
+LifeOS can load TheAlgorithm three ways:
 
 **1. Always Latest (Default)**
 ```json
@@ -144,10 +144,10 @@ Pulls from: `versions/v0.1.md` (doesn't change)
 ```
 Test your own ideas before publishing
 
-### How PAI Uses It
+### How LifeOS Uses It
 
 ```typescript
-// PAI fetches at build time
+// LifeOS fetches at build time
 const algorithm = await fetchAlgorithm({
   version: config.algorithmSource,
   cacheDir: "~/.claude/cache/algorithm",
@@ -199,7 +199,7 @@ The full spec is in **[TheAlgorithm.md](./TheAlgorithm.md)**:
 **To try it:**
 1. Read the philosophy above to get the idea
 2. Check out the spec to see how it works
-3. Look at [PAI](https://github.com/danielmiessler/PAI) to see it in action
+3. Look at [LifeOS](https://github.com/danielmiessler/LifeOS) to see it in action
 4. Fork it and try your own version
 
 ---
@@ -243,7 +243,9 @@ Not sure if this is achievable consistently, but that's the experiment.
 
 > The Algorithm has gone through five major eras since v0.1: the **0.x experimental era** (Jan–Feb 2026, format and ISC discovery), the **1.x consolidation** (Feb 2026, zero-delay output and effort-tier rebalancing), the **2.x → 4.x doctrine era** (Feb–Apr 2026, seven-phase enforcement, verification doctrine, hard-to-vary epistemology), the **5.x ISA-rename + checkpoint era** (Apr 2026, PRD → ISA vocabulary, BPE compaction, per-step durability), and the **6.x ISA-as-system-of-record + mode-classifier era** (Apr–May 2026, ISA elevated to universal primitive with five identities, twelve-section frame, classifier-driven mode selection, closed-enumeration thinking-capability vocabulary). Entries below are abridged — every version has its own embedded `CHANGES FROM …` block at the top of `versions/TheAlgorithm_vX.Y.Z.md`.
 
-### v6.3.0 (2026-04-29) — current
+*Note: mode/tier selection was retired in mid-2026 — current LifeOS releases run a single unified loop. Kept here as history.*
+
+### v6.3.0 (2026-04-29) — latest entry here; the shipping version lives in [LifeOS](https://github.com/danielmiessler/LifeOS)
 - **Thinking-capability vocabulary closed-enumeration release** — the 19 thinking capabilities (IterativeDepth, ApertureOscillation, FeedbackMemoryConsult, Advisor, ReReadCheck, FirstPrinciples, SystemsThinking, RootCauseAnalysis, Council, RedTeam, Science, BeCreative, Ideate, BitterPillEngineering, Evals, WorldThreatModel, Fabric patterns, ContextSearch, ISA) are printed verbatim INSIDE the doctrine read at run time
 - **Capability-Name Audit Gate** — fires at OBSERVE→THINK; thinking names in `🏹 CAPABILITIES SELECTED` must appear verbatim in the closed list, phantom names do NOT count toward the floor and are a CRITICAL FAILURE
 - **Closed-enumeration discipline** — adding new thinking capabilities now requires editing `capabilities.md` AND bumping the Algorithm minor version + updating doctrine; closed-enum drift is no longer silent
@@ -280,7 +282,7 @@ Not sure if this is achievable consistently, but that's the experiment.
 
 ### v5.4.0 (2026-04-27)
 - **Unified Learning Router in LEARN phase** — replaces the narrow "Knowledge capture" step with a router that handles every kind of learning: knowledge, operational rules, skill gotchas, project state, business facts, identity edits, doctrine changes, hook proposals, permission changes
-- Routing table mirrors PAI Self-Healing Infrastructure so Algorithm and constitution agree
+- Routing table mirrors LifeOS Self-Healing Infrastructure so Algorithm and constitution agree
 - Documentation-sync downstream: any inline write to a system file triggers documentation-update workflow
 
 ### v5.3.0 (2026-04-27)
@@ -368,7 +370,7 @@ Not sure if this is achievable consistently, but that's the experiment.
 
 ### v3.0.0 – v3.9.0 (2026-02 to 2026-03)
 - **Seven-phase doctrine made canonical** — OBSERVE, THINK, PLAN, BUILD, EXECUTE, VERIFY, LEARN as discrete phases with mandatory headers and voice transitions
-- **PRD as system of record** — `~/.claude/PAI/MEMORY/WORK/{slug}/PRD.md` is the single source of truth; hooks read, AI writes
+- **PRD as system of record** — `~/.claude/LIFEOS/MEMORY/WORK/{slug}/ISA.md` is the single source of truth; hooks read, AI writes
 - **ISC category system** — `[F]` Functional, `[S]` Structural, `[B]` Behavioral, `[N]` Negative, `[E]` Edge with proportional caps
 - **Splitting Test** — every criterion checked against And/With, independent failure, scope words, domain boundary
 - **Effort Levels** — E1 Standard / E2 Extended / E3 Advanced / E4 Deep / E5 Comprehensive with ISC floors and capability minimums
@@ -484,7 +486,7 @@ Not sure if this is achievable consistently, but that's the experiment.
 - Initial release
 - Seven-phase execution
 - ISC criteria system
-- PAI integration
+- LifeOS integration
 
 ---
 
@@ -501,7 +503,7 @@ If you want to propose major changes, open an issue first so we can discuss.
 
 ## 🔗 Related Projects
 
-- **[PAI](https://github.com/danielmiessler/PAI)** - Where I'm using this
+- **[LifeOS](https://github.com/danielmiessler/LifeOS)** - Where I'm using this
 - **[Fabric](https://github.com/danielmiessler/fabric)** - Related pattern system
 
 ---
